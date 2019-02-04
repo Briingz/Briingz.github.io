@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Petit+Formal+Script|Fondamento|Text+Me+One|Cookie|Englebert|Goudy+Bookletter+1911|Great+Vibes|Rochester|Just+Another+Hand|Bad+Script|VT323');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script|Nova+Mono');
+/*Grid template*/
+.page-wrapper{
+	display: grid;
+  	grid-template-columns: repeat(6, 1fr);
+  	grid-gap: 10px;
+  	grid-auto-rows: minmax(0px, auto);
+}
+
+.intro{
+	grid-row: 1;
+	grid-column: 2 / 6 ;
+	display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+  	grid-template-rows: repeat(3,1fr);
+  	grid-gap: 0px;
+  	grid-auto-rows: minmax(0 px,auto);
+}
+
+.intro [role='banner'] { 
+	height: 130px; 
+  	grid-row: 1;
+  	grid-column: 1 / 6;
+}
+
+.summary{
+	height: 20px;width: 450px;
+	grid-row: 2;
+	grid-column: 1 / 6;
+
+
+}
+
+#zen-preamble{
+	height: 150px;
+	grid-row: 3 / 5 ;
+	grid-column: 1 / 6;
+}
+
+.sidebar { 
+	grid-row: 2 ; 
+	grid-column: 2;
+  		
+}
+#zen-supporting{
+	grid-row: 2 / 4 ;
+	grid-column: 3 / 6;  	
+}
+
+footer { 
+	grid-row:  5 ;
+	grid-column: 2 / 6;  	
+	width: 620px;
+	background-position: center; 
+	background-color:  #ffff99;
+}
+
+/*Flex container*/
+#zen-supporting{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+/*Background color on Div column*/
+#zen-explanation{
+	border: 2px dashed #e1ffda;
+	border-radius: 25px;
+	width: 550px;
+	background-color: #FACD8A;
+	opacity: 0.7;
+}
+#zen-participation{	
+	width: 550px;
+	border: 2px dashed #e1ffda;
+	border-radius: 25px;
+	background-color: #F8A185;
+	opacity: 0.7;
+	align-self: flex-end;
+}
+#zen-benefits{
+	width: 550px;
+	border: 2px dashed #e1ffda;
+	border-radius: 25px;
+	background-color: #C6DF95;
+	opacity:0.7;
+	aalign-self: flex-start;
+}
+#zen-requirements{
+	width: 550px;
+	border: 2px dashed #e1ffda;
+	border-radius: 25px;
+	background-color: #96D0D0 ;
+	opacity:0.7;
+	align-self: flex-end;
+}
+
+/*Background*/
+.intro {
+	background-repeat: no-repeat;
+    background-position: right top;
+    background-image: url("./bg7-down2.png");
+}
+
+
+
+body{
+    background-color: #F5F3E3;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+#zen-supporting{
+    background-image: url("./background12.jpg");
+    background-repeat: repeat;
+    background-position: right;
+}
+
+aside{
+	border: 2px solid #EFFAB4 ;
+	background-color: #C6E5D9;
+	border-radius: 25px;
+}
+
+.select,.archives,.resources{
+	text-align: center;
+	background-color: #FF9F80;
+	width: 150px;
+	margin: 0 auto;
+	border: 1px solid #D1F2A5;
+}
+
+
+/*Fonts
+family=Petit+Formal+Script|
+Fondamento|
+Text+Me+One|
+Cookie|
+Englebert|
+Goudy+Bookletter+1911|
+Great+Vibes|
+Rochester|
+Just+Another+Hand
+Bad+Script
+*/
+
+
+h1{
+
+  	animation-name:  bubbleTitle ;	
+  	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+
+	
+	color:#F06256;
+	text-indent:5%;
+	line-height : 30pt;
+	font-size: 70px;
+	font-weight: bold;
+	text-shadow: 5px 5px #DAF2EA;
+	font-family: 'Petit Formal Script', cursive;
+}
+h2{
+	color:#adccff;
+	text-shadow: 2px 2px #DAF2EA;
+	text-indent:8%;
+	line-height : 5pt;
+	font-weight: bold;
+	font-family: 'Petit Formal Script', cursive;
+}
+.summary >p{
+	font-family: 'Great Vibes', cursive;
+	text-indent:8%;
+	font-size: 19px;
+	font-weight: bold;
+	text-align: center;
+	color:#6600cc;
+}
+.preamble > p{
+	font-family: 'Rochester', cursive;
+	color:#006680;
+	text-indent: 8%;
+	line-height : 9pt;
+	font-size: 16.5px;
+	text-align: center;
+	width: 780px;
+	background-position: right;
+}
+
+.preamble > h3{
+	line-height: 0pt;
+	color: #009999;
+	text-decoration: underline;
+}
+
+
+h3 {
+	font-family: 'Fondamento', cursive;
+	color:#46164F;
+	text-shadow: 2px 2px #DAF2EA;
+	text-align: center;
+}
+li > a {
+	color:#A678ED;
+	font-family: 'Cookie', serif;
+	font-size: 20px;
+}
+li {
+	color: #3600bd;font-family: 'Cookie', serif;
+}
+
+
+.explanation , .participation , .benefits ,.requirements > p{
+	/*font-family: 'Goudy Bookletter 1911', serif;*/
+	color:#24263D;
+	text-indent:5%;
+	font-family: 'Goudy Bookletter 1911', monospace;
+	font-size: 18px;
+}
+
+ p > abbr  {
+	font-family: 'Englebert', sans-serif;
+	font-weight: bold;
+	color: #ff0052;
+	font-size: 14px;
+
+}
+
+footer{
+	font-family: 'VT323',monospace;
+	font-size: 30px;
+	text-align: center;
+
+
+}
+
+
+/*Animation*/
+@keyframes bubbleTitle {
+
+  0% {
+    position: relative; right: -50px;
+    opacity: 0.5;
+  }
+  60% {
+   position: relative; right: -50px;
+    opacity: 1;
+  }
+  100% {
+   opacity: 0.75;
+  }
+}
+
+
+@keyframes title {
+
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+  	transform: scale(1.0);
+  }
+}
+
+@keyframes fontColor {
+0% {
+    color: #cdd2e4;
+  }
+
+
+  100% {
+  	color: #6600cc;
+  }
+}
+
+.summary > p {
+	animation-name: fontColor;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+
+}
+.explanation , .participation , .benefits ,.requirements {
+  	animation-name:  title ;	
+  	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
