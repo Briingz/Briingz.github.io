@@ -75,3 +75,6 @@ h2{
     text-shadow: 5px 5px #DAF2EA;
     font-size:40px;
 }
+label{
+    font-family: 'Kanit', sans-serif;
+}

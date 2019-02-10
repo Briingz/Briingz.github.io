@@ -35,6 +35,7 @@ $(document).ready(function() {
 
 
     $("#submit-simple-btn").click(function(){
+        document.getElementById("bookTable").style.display="";
         var input = document.getElementById("simple-input-text");
         var filter = input.value.toLowerCase();
         var table = document.getElementById("bookTable");
@@ -51,12 +52,14 @@ $(document).ready(function() {
             }
           } 
         }
+        document.getElementById("simple-input-text").value="";
     })
 
-
+    
     $("#submit-advance-btn").click(function(){
         
         //Declare main values
+        document.getElementById("bookTable").style.display="";
         var table = document.getElementById("bookTable");
         var tr = table.getElementsByTagName("tr");  
         var td, i, txtValue;
@@ -161,7 +164,7 @@ $(document).ready(function() {
         */
 
         //Show every element on table if didn't search anything
-        var state =
+        var isAllBlankFillState =
         (isRankEmpty && isBookNameEmpty && isAuthorEmpty && isPublisherEmpty
             && isNpageEmpty && isPriceEmpty);
 
@@ -402,22 +405,21 @@ $(document).ready(function() {
             table.style.display="none";
         }
         //show table
-        if(!state){
+        if(!isAllBlankFillState){
             for( i=0 ; i<matchingRows.length+1 ; i++ ){
                 var j=matchingRows[i];
                 tr[j].style.display = "";
             }
         }
         else{
-                $("tbody").style.display ="none";
-            
+                table.style.display ="";
         }  
         
 
 
 
         //Finish everything clear state
-        isFirstSearchBlockYet=false;isError=false;state=false;
+        isFirstSearchBlockYet=false;isError=false;isAllBlankState=false;
       
 
     })
@@ -428,9 +430,12 @@ $(document).ready(function() {
         $("#container-simple-search").toggle();
         if( $("#container-advance-search").is(":hidden")){
             $(this).text("Advance Search");
+            document.getElementById("bookTable").style.display="none";
         }
         else {
             $(this).text("Simple Search");
+            document.getElementById("bookTable").style.display="none";
+
         }
     })
   
