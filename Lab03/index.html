@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Best Seller Book</title>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row container-header">
+            <div class="col-2 plain"></div>
+            <div class="col-8">
+                <div class = "header">
+                    <h1 class= "text-center"><br>
+                        40 อันดับ Best Seller 
+                        <br>  หนังสือแนวพัฒนาตนเอง</h2>
+                </div>                
+            </div>
+            <div class="col-2 plain"></div>
+        </div>
+        <div class="row" id=container-simple-search>
+            <div class="col-4 plain" ></div>
+            <div class="col-4 container-simple" >
+                <div class="row">
+                    <h2>SEARCH</h2>
+                </div>
+                <div class="row">
+                    <div class="col-2 plain"></div>
+                    <div class="col container-simple">
+                        <label class="label" for="simple-input-text">ชื่อหนังสือ: </label>
+                    </div>
+                    <div class="col-2 plain"></div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-2 plain"></div>
+                    <div class="col-6">
+                        <p class="control">
+                            <input  class="input is-rounded" 
+                            type="text" id="simple-input-text"
+                            >                                            
+                        </p>                        
+                    </div>
+                    <div class="col-2">
+                        <div class="control">
+                            <button id="submit-simple-btn" class="btn btn-success">
+                                ค้นหา
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-2 plain"></div>
+                           
+                </div>
+                <div class="row">
+
+                </div>   
+            </div>
+            <div class="col-4 plain"></div>
+        </div>
+        <div class="row" id=container-advance-search style="display: none">
+            <div class="col-3 plain"></div>
+            <div class="col-6">
+                <div class="row container-advance" >
+                    <h2>ADVANCE SEARCH</h2>
+                </div>
+                <div class="row container-advance">
+                    <div class="col-6">
+                        <div class="row">
+                         <label class="label" for="bookname-input-text">ชื่อหนังสือ: </label>   
+                        </div>
+                        <div class="row">
+                            <div class ="col-8">
+                                <p class="control">
+                                    <input  class="input is-rounded" 
+                                        type="text" id="bookname-input-text"
+                                        >
+                                </p>
+                            </div>
+                            <div class="col-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="label" for="author-input-text">ชื่อผู้แต่ง: </label>   
+                        </div>
+                        <div class="row">
+                            <div class ="col-8">
+                                <p class="control">
+                                    <input  class="input is-rounded" 
+                                       type="text" id="author-input-text"
+                                       >
+                                </p>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                        <div class="row">
+                            <label class="label" for="publisher-input-text">สำนักพิมพ์: </label>   
+                            </div>
+                            <div class="row">
+                                <div class ="col-8">
+                                    <p class="control">
+                                        <input  class="input is-rounded" 
+                                           type="text" id="publisher-input-text"
+                                           >
+                                    </p>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <label class="label" id="rank-input-text">อันดับหนังสือ: </label>
+                        </div>
+                        <div class="row">
+                        <div class="col-4">
+                            <p class="control">
+                                <input  class="input is-rounded"  style="width: 80px"
+                                type="number" min=0 id="rank-input-text-start"
+                                 >
+                            </p>
+                        </div>
+                        <div class="col-1">
+                            <label class="label"> ถึง </label>
+                        </div>
+                        <div class="col-4">
+                            <p class="control">
+                                <input  class="input is-rounded" style="width: 80px"
+                                type="number" min=0 id="rank-input-text-end"
+                                 >
+                            </p>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                            <label class="label" id="npage-input-text">จำนวนหน้าหนังสือ: </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="control">
+                                    <input  class="input is-rounded"  style="width: 80px"
+                                        type="number" min=0 id="npage-input-text-start"
+                                         >
+                                </p>
+                            </div>
+                            <div class="col-1">
+                                <label class="label"> ถึง </label>
+                            </div>
+                            <div class="col-4">
+                                <p class="control">
+                                    <input  class="input is-rounded" style="width: 80px"
+                                    type="number" min=0 id="npage-input-text-end"
+                                     >
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                                <label class="label" id="price-input-text">ราคาหนังสือ: </label>
+                            </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="control">
+                                    <input  class="input is-rounded"  style="width: 80px"
+                                    type="number" min=0 id="price-input-text-start"
+                                     >
+                                </p>
+                            </div>
+                            <div class="col-1">
+                                <label class="label"> ถึง </label>
+                            </div>
+                            <div class="col-4">
+                                <p class="control">
+                                    <input  class="input is-rounded" style="width: 80px"
+                                    type="number" min=0 id="price-input-text-end"
+                                     >
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5 container-advance">
+                        <label class="label" for="submit-advance-btn" id="history-advance-label">การค้นหาล่าสุด: </label>
+                    </div>
+                    <div class="col-7 control container-advance">
+                            <button class="btn btn-primary" id="submit-advance-btn" class="button is-primary">
+                                ค้นหา
+                            </button>
+                    </div>
+                </div>
+            </div>    
+            <div class="col-3 plain"></div>
+        </div>
+    
+        <div class="row toggle-btn">
+            <div class="col-5"></div>
+                <div class="control">
+                        <button id="toggle-advance-btn" class="btn btn-warning" >
+                            Advance Search
+                        </button>
+                    </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+    
+        <div class= "col-12">
+            <div class=container-table >
+                    <table class=table id="bookTable" style="display: none" >
+                        <thead>
+                            <tr>
+                                <th>อันดับที่</th>
+                                <th>ตัวอย่างปกหนังสือ</th>
+                                <th>ชื่อหนังสือ</th>
+                                <th>ชื่อผู้แต่ง</th>
+                                <th>เรื่องย่อ</th>
+                                <th>สำนักพิมพ์</th>
+                                <th>จำนวนหน้า</th>
+                                <th>ราคา(บาท)</th>
+                                <th>ที่มา</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bookTable-body"></tbody>
+                        <tfoot>
+                            <tr>
+                                <th>อันดับที่</th>
+                                <th>ตัวอย่างปกหนังสือ</th>
+                                <th>ชื่อหนังสือ</th>
+                                <th>ชื่อผู้แต่ง</th>
+                                <th>เรื่องย่อ</th>
+                                <th>สำนักพิมพ์</th>
+                                <th>จำนวนหน้า</th>
+                                <th>ราคา(บาท)</th>
+                                <th>ที่มา</th>
+                            </tr>
+                        </tfoot>
+                    </table> 
+                </div>
+        </div>
+            
+    </div>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="myscript.js"></script>
+</body>
+    
+
+</html>
